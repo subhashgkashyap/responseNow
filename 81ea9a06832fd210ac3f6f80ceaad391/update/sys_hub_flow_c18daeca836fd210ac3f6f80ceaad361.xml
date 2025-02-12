@@ -1,0 +1,1458 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>25000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>incident_management_workflow</internal_name>
+        <label_cache>[{"name":"Created_1.current.state","label":"Trigger - Record Created➛Incident Record➛State","reference":"","reference_display":"State","type":"choice","base_type":"choice","parent_table_name":"incident","column_name":"state","choices":[{"used":false,"label":"New","image":"","reference":false,"missing":false,"rawLabel":"New","selected":false,"value":"1","parameters":{"name":"incident"}},{"used":false,"label":"In Progress","image":"","reference":false,"missing":false,"rawLabel":"In Progress","selected":false,"value":"2","parameters":{"name":"incident"}},{"used":false,"label":"On Hold","image":"","reference":false,"missing":false,"rawLabel":"On Hold","selected":false,"value":"3","parameters":{"name":"incident"}},{"used":false,"label":"Resolved","image":"","reference":false,"missing":false,"rawLabel":"Resolved","selected":false,"value":"6","parameters":{"name":"incident"}},{"used":false,"label":"Closed","image":"","reference":false,"missing":false,"rawLabel":"Closed","selected":false,"value":"7","parameters":{"name":"incident"}},{"used":false,"label":"Canceled","image":"","reference":false,"missing":false,"rawLabel":"Canceled","selected":false,"value":"8","parameters":{"name":"incident"}}],"usedInstances":{"91aa5b36-72ed-4c18-8aa6-b08c95d626e7":["condition"]}},{"name":"Created_1.current.sla_due","label":"Trigger - Record Created➛Incident Record➛SLA due","reference":"","reference_display":"SLA due","type":"due_date","base_type":"due_date","parent_table_name":"incident","column_name":"sla_due","usedInstances":{"d6ee3b7f-63c5-472b-a0af-afa209b17e9f":[null]}},{"name":"Created_1.current.number","label":"Trigger - Record Created➛Incident Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"incident","column_name":"number","usedInstances":{"d6ee3b7f-63c5-472b-a0af-afa209b17e9f":[null,"ah_subject"]}},{"name":"Created_1.current.assigned_to.first_name","label":"Trigger - Record Created➛Incident Record➛Assigned to➛First name","reference":"","reference_display":"First name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"first_name","usedInstances":{"d6ee3b7f-63c5-472b-a0af-afa209b17e9f":[null]}},{"name":"Created_1.current.assigned_to.email","label":"Trigger - Record Created➛Incident Record➛Assigned to➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{"d6ee3b7f-63c5-472b-a0af-afa209b17e9f":["ah_to"]}},{"name":"Created_1.current.category","label":"Trigger - Record Created➛Incident Record➛Category","reference":"","reference_display":"Category","type":"choice","base_type":"choice","parent_table_name":"incident","column_name":"category","choices":[{"label":"-- None --","used":false,"image":"","reference":false,"missing":false,"rawLabel":"-- None --","selected":false,"value":""},{"used":false,"label":"Inquiry / Help","image":"","reference":false,"missing":false,"rawLabel":"Inquiry / Help","selected":false,"value":"inquiry","parameters":{"name":"incident"}},{"used":false,"label":"Software","image":"","reference":false,"missing":false,"rawLabel":"Software","selected":false,"value":"software","parameters":{"name":"incident"}},{"used":false,"label":"Hardware","image":"","reference":false,"missing":false,"rawLabel":"Hardware","selected":false,"value":"hardware","parameters":{"name":"incident"}},{"used":false,"label":"Network","image":"","reference":false,"missing":false,"rawLabel":"Network","selected":false,"value":"network","parameters":{"name":"incident"}},{"used":false,"label":"Database","image":"","reference":false,"missing":false,"rawLabel":"Database","selected":false,"value":"database","parameters":{"name":"incident"}}],"usedInstances":{"d05dffde-d7b4-40d2-bf4a-015e7c83ebae":["condition"],"0a1e6f42-eff6-4ffe-bb9e-077974023843":["condition"],"a275f4c9-5fd4-4060-ad11-f308ed242f05":["condition"],"3d1a89ec-3c14-4144-ba72-3d738dd115b7":["condition"],"d448dd2f-b2a0-44b2-bb26-79079a9efa64":["condition"]}},{"name":"Created_1.current.caller_id.first_name","label":"Trigger - Record Created➛Incident Record➛Caller➛First name","reference":"","reference_display":"First name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"first_name","usedInstances":{"9dbbddde-64f6-49fa-9ad8-345bb4d346c1":[null]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","usedInstances":{"9dbbddde-64f6-49fa-9ad8-345bb4d346c1":["record"],"9562589e-3fc6-4d80-95e4-540154300f39":["record"],"7a1a87c1-5b61-4abd-9716-854413ab6737":["record"],"b6fa5c30-6e6f-48c8-9225-eb0f2e1c6def":["record"],"873df98e-1e15-4efe-b192-d2d4c7ed0427":["record"],"528c51e2-8a10-4f6e-b10f-69875d6fdedb":["record"],"56679cb8-5d93-4963-9fde-5d3d3f0b18f4":["record"],"005dcdd1-3fd8-4e74-bca0-ebd67d27a5c2":["record"],"f3c1b5c8-133a-4130-85b6-3d49c69d8128":["record"],"d6ee3b7f-63c5-472b-a0af-afa209b17e9f":["record"],"3b597378-566a-47a7-b01f-76932ef95719":["record"]},"attributes":{}},{"name":"Created_1.current.caller_id.email","label":"Trigger - Record Created➛Incident Record➛Caller➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{"9dbbddde-64f6-49fa-9ad8-345bb4d346c1":["ah_to"],"d6ee3b7f-63c5-472b-a0af-afa209b17e9f":["ah_cc"]}}]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <name>Incident Management Workflow</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 18:04:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c18daeca836fd210ac3f6f80ceaad361</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Incident Management Workflow</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ResponseNow" source="x_1072120_ims_rn">81ea9a06832fd210ac3f6f80ceaad391</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ResponseNow">81ea9a06832fd210ac3f6f80ceaad391</sys_scope>
+        <sys_update_name>sys_hub_flow_c18daeca836fd210ac3f6f80ceaad361</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 20:12:17</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=c18daeca836fd210ac3f6f80ceaad361"/>
+    <sys_variable_value action="delete_multiple" query="document_key=c18daeca836fd210ac3f6f80ceaad361"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=c18daeca836fd210ac3f6f80ceaad361^sys_idNOT INf5153a8683afd210ac3f6f80ceaad3e7"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment>Triggers when a record is inserted to Incident table</comment>
+        <display_text/>
+        <flow display_value="Incident Management Workflow">c18daeca836fd210ac3f6f80ceaad361</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 18:37:38</sys_created_on>
+        <sys_id>f5153a8683afd210ac3f6f80ceaad3e7</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 20:12:16</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=f5153a8683afd210ac3f6f80ceaad3e7"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>f5153a8683afd210ac3f6f80ceaad3e7</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 18:37:38</sys_created_on>
+        <sys_id>31153a8683afd210ac3f6f80ceaad3e9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 18:37:38</sys_updated_on>
+        <value>incident</value>
+        <variable display_value="Table">cfca92e0c31322002841b63b12d3ae00</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>f5153a8683afd210ac3f6f80ceaad3e7</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 18:37:38</sys_created_on>
+        <sys_id>f5153a8683afd210ac3f6f80ceaad3e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 18:37:38</sys_updated_on>
+        <value>^EQ</value>
+        <variable display_value="Condition">66aadea0c31322002841b63b12d3aebf</variable>
+    </sys_variable_value>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=c18daeca836fd210ac3f6f80ceaad361"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=c18daeca836fd210ac3f6f80ceaad361^sys_idNOT INc18daeca836fd210ac3f6f80ceaad363"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>c18daeca836fd210ac3f6f80ceaad361</id>
+        <name>Incident Management Workflow</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 18:04:33</sys_created_on>
+        <sys_id>c18daeca836fd210ac3f6f80ceaad363</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 18:04:33</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=c18daeca836fd210ac3f6f80ceaad363"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=c18daeca836fd210ac3f6f80ceaad361^sys_idNOT IN31153e4683afd210ac3f6f80ceaad321,f9153e4683afd210ac3f6f80ceaad327"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Incident Management Workflow">c18daeca836fd210ac3f6f80ceaad361</model>
+        <model_id>c18daeca836fd210ac3f6f80ceaad361</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_c18daeca836fd210ac3f6f80ceaad361</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 18:37:38</sys_created_on>
+        <sys_id>31153e4683afd210ac3f6f80ceaad321</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="ResponseNow">81ea9a06832fd210ac3f6f80ceaad391</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 18:37:38</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=31153e4683afd210ac3f6f80ceaad321"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Incident Management Workflow">c18daeca836fd210ac3f6f80ceaad361</model>
+        <model_id>c18daeca836fd210ac3f6f80ceaad361</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_c18daeca836fd210ac3f6f80ceaad361</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 18:37:38</sys_created_on>
+        <sys_id>f9153e4683afd210ac3f6f80ceaad327</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="ResponseNow">81ea9a06832fd210ac3f6f80ceaad391</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 18:37:38</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f9153e4683afd210ac3f6f80ceaad327"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=c18daeca836fd210ac3f6f80ceaad361"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=c18daeca836fd210ac3f6f80ceaad361"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=c18daeca836fd210ac3f6f80ceaad361^sys_idNOT IN305a434283231610ac3f6f80ceaad37a,39153a8683afd210ac3f6f80ceaad3f0,6f7543ca83efd210ac3f6f80ceaad3a1,737543ca83efd210ac3f6f80ceaad3c2,777543ca83efd210ac3f6f80ceaad3cb,7f7543ca83efd210ac3f6f80ceaad3b8,fb7543ca83efd210ac3f6f80ceaad3d3"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Incident Management Workflow">c18daeca836fd210ac3f6f80ceaad361</flow>
+        <generation_source/>
+        <order>12</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 20:10:25</sys_created_on>
+        <sys_id>305a434283231610ac3f6f80ceaad37a</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="ResponseNow">81ea9a06832fd210ac3f6f80ceaad391</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 20:12:17</sys_updated_on>
+        <ui_id>d6ee3b7f-63c5-472b-a0af-afa209b17e9f</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=305a434283231610ac3f6f80ceaad37a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>305a434283231610ac3f6f80ceaad37a</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 20:10:25</sys_created_on>
+        <sys_id>705a434283231610ac3f6f80ceaad37e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 20:10:25</sys_updated_on>
+        <value>incident</value>
+        <variable display_value="Table">19806bf4a70323008299b39f087901d4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>305a434283231610ac3f6f80ceaad37a</document_key>
+        <order>7</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 20:10:25</sys_created_on>
+        <sys_id>785a434283231610ac3f6f80ceaad37d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 20:10:25</sys_updated_on>
+        <value/>
+        <variable display_value="Body">ad806bf4a70323008299b39f087901f2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=305a434283231610ac3f6f80ceaad37a"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_body</field>
+        <id>305a434283231610ac3f6f80ceaad37a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 20:10:25</sys_created_on>
+        <sys_id>bc5a434283231610ac3f6f80ceaad37c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 20:12:17</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>&lt;p data-tinymcerootblock=""&gt;&lt;span style="font-family: 'times new roman', times; font-size: 10pt;"&gt;Dear&amp;nbsp;&lt;/span&gt;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:eb9a6943-73c4-4898-bfb0-6f4c38b533b6}}"&gt;&lt;span class="data_pill  accepts_transform_functions" tabindex="0" contenteditable="false" data-pillvalue="{{fd_transform:eb9a6943-73c4-4898-bfb0-6f4c38b533b6}}"&gt;&lt;span class="data-pill-content-container"&gt;&lt;span class="pills"&gt;&lt;span class="pill-text" data-tooltip-id="ah_tooltipTop" data-tooltip-content="Trigger - Record Created &amp;gt; Incident Record &amp;gt; Assigned to &amp;gt; First name"&gt;&lt;span class="pill-start"&gt;Trigger - Record Created&lt;/span&gt;&lt;span class="pill-arrow"&gt;&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;...&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="pill-end"&gt;First name&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;button id="transform_function_facade_eb9a6943-73c4-4898-bfb0-6f4c38b533b6" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;&lt;span style="font-family: 'times new roman', times; font-size: 10pt;"&gt;We have a new task that needs attention. The incident&amp;nbsp;&lt;/span&gt;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:87454baa-8801-433c-93a6-504ae66681c9}}"&gt;&lt;span class="data_pill  accepts_transform_functions" tabindex="0" contenteditable="false" data-pillvalue="{{fd_transform:87454baa-8801-433c-93a6-504ae66681c9}}"&gt;&lt;span class="data-pill-content-container"&gt;&lt;span class="pills"&gt;&lt;span class="pill-text" data-tooltip-id="ah_tooltipTop" data-tooltip-content="Trigger - Record Created &amp;gt; Incident Record &amp;gt; Number"&gt;&lt;span class="pill-start"&gt;Trigger - Record Created&lt;/span&gt;&lt;span class="pill-arrow"&gt;&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;...&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="pill-end"&gt;Number&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;button id="transform_function_facade_87454baa-8801-433c-93a6-504ae66681c9" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-family: 'times new roman', times; font-size: 10pt;"&gt; has been assigned to you.&amp;nbsp;Getting started on this task will help us stay on track and meet&amp;nbsp;the deadline.&lt;/span&gt;&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;&lt;span style="font-family: 'times new roman', times; font-size: 10pt;"&gt;Thanks and regards&lt;/span&gt;&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;&lt;span style="font-family: 'times new roman', times; font-size: 10pt;"&gt;IT Support&lt;/span&gt;&lt;/p&gt;</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_cc</field>
+        <id>305a434283231610ac3f6f80ceaad37a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 20:10:25</sys_created_on>
+        <sys_id>f45a434283231610ac3f6f80ceaad37d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 20:10:25</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current.caller_id.email}} </value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_subject</field>
+        <id>305a434283231610ac3f6f80ceaad37a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 20:10:25</sys_created_on>
+        <sys_id>345a434283231610ac3f6f80ceaad37d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 20:10:25</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>Incident {{Created_1.current.number}} has been assigned to you</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_to</field>
+        <id>305a434283231610ac3f6f80ceaad37a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 20:10:25</sys_created_on>
+        <sys_id>345a434283231610ac3f6f80ceaad37c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 20:10:25</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current.assigned_to.email}} </value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>305a434283231610ac3f6f80ceaad37a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 20:10:25</sys_created_on>
+        <sys_id>f85a434283231610ac3f6f80ceaad37c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 20:10:25</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>305a434283231610ac3f6f80ceaad37a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 20:10:25</sys_created_on>
+        <sys_id>705a434283231610ac3f6f80ceaad37d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 20:10:25</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=305a434283231610ac3f6f80ceaad37a"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=305a434283231610ac3f6f80ceaad37a"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment>Send an email to the caller confirming that their incident is logged</comment>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Incident Management Workflow">c18daeca836fd210ac3f6f80ceaad361</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 18:37:39</sys_created_on>
+        <sys_id>39153a8683afd210ac3f6f80ceaad3f0</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="ResponseNow">81ea9a06832fd210ac3f6f80ceaad391</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 20:12:16</sys_updated_on>
+        <ui_id>9dbbddde-64f6-49fa-9ad8-345bb4d346c1</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=39153a8683afd210ac3f6f80ceaad3f0"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>39153a8683afd210ac3f6f80ceaad3f0</document_key>
+        <order>6</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 18:37:39</sys_created_on>
+        <sys_id>71157a8683afd210ac3f6f80ceaad31a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 18:37:39</sys_updated_on>
+        <value>Your incident has been submitted</value>
+        <variable display_value="Subject">5d806bf4a70323008299b39f087901ec</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>39153a8683afd210ac3f6f80ceaad3f0</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 18:37:39</sys_created_on>
+        <sys_id>bd157a8683afd210ac3f6f80ceaad319</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 18:37:39</sys_updated_on>
+        <value>incident</value>
+        <variable display_value="Table">19806bf4a70323008299b39f087901d4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>39153a8683afd210ac3f6f80ceaad3f0</document_key>
+        <order>7</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 18:37:39</sys_created_on>
+        <sys_id>f9157a8683afd210ac3f6f80ceaad319</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 18:37:39</sys_updated_on>
+        <value/>
+        <variable display_value="Body">ad806bf4a70323008299b39f087901f2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=39153a8683afd210ac3f6f80ceaad3f0"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_body</field>
+        <id>39153a8683afd210ac3f6f80ceaad3f0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 18:37:39</sys_created_on>
+        <sys_id>f1157a8683afd210ac3f6f80ceaad319</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 18:37:39</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>&lt;p data-tinymcerootblock=""&gt;&lt;span style="font-family: 'times new roman', times; font-size: 10pt;"&gt;Dear&lt;/span&gt;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:93b9371a-8722-435d-b33c-031d099cc549}}"&gt;&lt;span class="data_pill  accepts_transform_functions" tabindex="0" contenteditable="false" data-pillvalue="{{fd_transform:93b9371a-8722-435d-b33c-031d099cc549}}"&gt;&lt;span class="data-pill-content-container"&gt;&lt;span class="pills"&gt;&lt;span class="pill-text" data-tooltip-id="ah_tooltipTop" data-tooltip-content="Trigger - Record Created &amp;gt; Incident Record &amp;gt; Caller &amp;gt; First name"&gt;&lt;span class="pill-start"&gt;Trigger - Record Created&lt;/span&gt;&lt;span class="pill-arrow"&gt;&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;...&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="pill-end"&gt;First name&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;button id="transform_function_facade_93b9371a-8722-435d-b33c-031d099cc549" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;&lt;span style="font-family: 'times new roman', times; font-size: 10pt;"&gt;A support agent will contact you soon.&lt;/span&gt;&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;&lt;span style="font-family: 'times new roman', times; font-size: 10pt;"&gt;Thanks and regards&lt;/span&gt;&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;&lt;span style="font-family: 'times new roman', times; font-size: 10pt;"&gt;IT Support&lt;/span&gt;&lt;/p&gt;</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_subject</field>
+        <id>39153a8683afd210ac3f6f80ceaad3f0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 18:37:39</sys_created_on>
+        <sys_id>79157a8683afd210ac3f6f80ceaad319</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 18:37:39</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_to</field>
+        <id>39153a8683afd210ac3f6f80ceaad3f0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 18:37:39</sys_created_on>
+        <sys_id>79157a8683afd210ac3f6f80ceaad318</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 18:37:39</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current.caller_id.email}} </value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>39153a8683afd210ac3f6f80ceaad3f0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 18:37:39</sys_created_on>
+        <sys_id>31157a8683afd210ac3f6f80ceaad319</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 18:37:39</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>39153a8683afd210ac3f6f80ceaad3f0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 18:37:39</sys_created_on>
+        <sys_id>b5157a8683afd210ac3f6f80ceaad319</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 18:37:39</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=39153a8683afd210ac3f6f80ceaad3f0"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=39153a8683afd210ac3f6f80ceaad3f0"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Incident Management Workflow">c18daeca836fd210ac3f6f80ceaad361</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>0a1e6f42-eff6-4ffe-bb9e-077974023843</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>6f7543ca83efd210ac3f6f80ceaad3a1</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="ResponseNow">81ea9a06832fd210ac3f6f80ceaad391</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 20:12:17</sys_updated_on>
+        <ui_id>873df98e-1e15-4efe-b192-d2d4c7ed0427</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=6f7543ca83efd210ac3f6f80ceaad3a1"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>6f7543ca83efd210ac3f6f80ceaad3a1</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>277543ca83efd210ac3f6f80ceaad3a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:19</sys_updated_on>
+        <value>incident</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>6f7543ca83efd210ac3f6f80ceaad3a1</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>637543ca83efd210ac3f6f80ceaad3a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:19</sys_updated_on>
+        <value>assigned_to={"display":"Adela Cervantsz","value":"0a826bf03710200044e0bfc8bcbe5d7a","table":"sys_user","sys_id":"0a826bf03710200044e0bfc8bcbe5d7a"}</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=6f7543ca83efd210ac3f6f80ceaad3a1"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>6f7543ca83efd210ac3f6f80ceaad3a1</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>ef7543ca83efd210ac3f6f80ceaad3a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:19</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>6f7543ca83efd210ac3f6f80ceaad3a1</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>6b7543ca83efd210ac3f6f80ceaad3a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:19</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>6f7543ca83efd210ac3f6f80ceaad3a1</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>2f7543ca83efd210ac3f6f80ceaad3a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:19</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=6f7543ca83efd210ac3f6f80ceaad3a1"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6f7543ca83efd210ac3f6f80ceaad3a1"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Incident Management Workflow">c18daeca836fd210ac3f6f80ceaad361</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>3d1a89ec-3c14-4144-ba72-3d738dd115b7</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>737543ca83efd210ac3f6f80ceaad3c2</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="ResponseNow">81ea9a06832fd210ac3f6f80ceaad391</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 20:12:17</sys_updated_on>
+        <ui_id>56679cb8-5d93-4963-9fde-5d3d3f0b18f4</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=737543ca83efd210ac3f6f80ceaad3c2"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>737543ca83efd210ac3f6f80ceaad3c2</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>7f7543ca83efd210ac3f6f80ceaad3c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:19</sys_updated_on>
+        <value>incident</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>737543ca83efd210ac3f6f80ceaad3c2</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>bb7543ca83efd210ac3f6f80ceaad3c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:19</sys_updated_on>
+        <value>assigned_to={"display":"Abraham Lincoln","value":"a8f98bb0eb32010045e1a5115206fe3a","table":"sys_user","sys_id":"a8f98bb0eb32010045e1a5115206fe3a"}</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=737543ca83efd210ac3f6f80ceaad3c2"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>737543ca83efd210ac3f6f80ceaad3c2</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>3b7543ca83efd210ac3f6f80ceaad3c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:19</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>737543ca83efd210ac3f6f80ceaad3c2</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>b37543ca83efd210ac3f6f80ceaad3c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:19</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>737543ca83efd210ac3f6f80ceaad3c2</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>777543ca83efd210ac3f6f80ceaad3c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:19</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=737543ca83efd210ac3f6f80ceaad3c2"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=737543ca83efd210ac3f6f80ceaad3c2"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Incident Management Workflow">c18daeca836fd210ac3f6f80ceaad361</flow>
+        <generation_source/>
+        <order>9</order>
+        <parent_ui_id>d448dd2f-b2a0-44b2-bb26-79079a9efa64</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>777543ca83efd210ac3f6f80ceaad3cb</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="ResponseNow">81ea9a06832fd210ac3f6f80ceaad391</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 20:12:17</sys_updated_on>
+        <ui_id>005dcdd1-3fd8-4e74-bca0-ebd67d27a5c2</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=777543ca83efd210ac3f6f80ceaad3cb"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>777543ca83efd210ac3f6f80ceaad3cb</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>737543ca83efd210ac3f6f80ceaad3cd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:19</sys_updated_on>
+        <value>incident</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>777543ca83efd210ac3f6f80ceaad3cb</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>bf7543ca83efd210ac3f6f80ceaad3cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:19</sys_updated_on>
+        <value>assigned_to={"display":"Abel Tuter","value":"62826bf03710200044e0bfc8bcbe5df1","table":"sys_user","sys_id":"62826bf03710200044e0bfc8bcbe5df1"}</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=777543ca83efd210ac3f6f80ceaad3cb"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>777543ca83efd210ac3f6f80ceaad3cb</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>3f7543ca83efd210ac3f6f80ceaad3cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:19</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>777543ca83efd210ac3f6f80ceaad3cb</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>b77543ca83efd210ac3f6f80ceaad3cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:19</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>777543ca83efd210ac3f6f80ceaad3cb</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>7b7543ca83efd210ac3f6f80ceaad3cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:19</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=777543ca83efd210ac3f6f80ceaad3cb"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=777543ca83efd210ac3f6f80ceaad3cb"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Incident Management Workflow">c18daeca836fd210ac3f6f80ceaad361</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>a275f4c9-5fd4-4060-ad11-f308ed242f05</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>7f7543ca83efd210ac3f6f80ceaad3b8</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="ResponseNow">81ea9a06832fd210ac3f6f80ceaad391</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 20:12:17</sys_updated_on>
+        <ui_id>528c51e2-8a10-4f6e-b10f-69875d6fdedb</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=7f7543ca83efd210ac3f6f80ceaad3b8"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>7f7543ca83efd210ac3f6f80ceaad3b8</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>7b7543ca83efd210ac3f6f80ceaad3ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:19</sys_updated_on>
+        <value>incident</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>7f7543ca83efd210ac3f6f80ceaad3b8</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>b77543ca83efd210ac3f6f80ceaad3ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:19</sys_updated_on>
+        <value>assigned_to={"display":"Alejandra Prenatt","value":"22826bf03710200044e0bfc8bcbe5dec","table":"sys_user","sys_id":"22826bf03710200044e0bfc8bcbe5dec"}</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=7f7543ca83efd210ac3f6f80ceaad3b8"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>7f7543ca83efd210ac3f6f80ceaad3b8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>377543ca83efd210ac3f6f80ceaad3ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:19</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>7f7543ca83efd210ac3f6f80ceaad3b8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>bf7543ca83efd210ac3f6f80ceaad3b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:19</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>7f7543ca83efd210ac3f6f80ceaad3b8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>737543ca83efd210ac3f6f80ceaad3ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:19</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=7f7543ca83efd210ac3f6f80ceaad3b8"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=7f7543ca83efd210ac3f6f80ceaad3b8"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Incident Management Workflow">c18daeca836fd210ac3f6f80ceaad361</flow>
+        <generation_source/>
+        <order>11</order>
+        <parent_ui_id>09b39e00-0f94-40d2-be3c-92b475f1147b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>fb7543ca83efd210ac3f6f80ceaad3d3</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="ResponseNow">81ea9a06832fd210ac3f6f80ceaad391</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 20:12:17</sys_updated_on>
+        <ui_id>f3c1b5c8-133a-4130-85b6-3d49c69d8128</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=fb7543ca83efd210ac3f6f80ceaad3d3"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>fb7543ca83efd210ac3f6f80ceaad3d3</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>377543ca83efd210ac3f6f80ceaad3d5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:19</sys_updated_on>
+        <value>assigned_to={"display":"Aileen Mottern","value":"71826bf03710200044e0bfc8bcbe5d3b","table":"sys_user","sys_id":"71826bf03710200044e0bfc8bcbe5d3b"}</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>fb7543ca83efd210ac3f6f80ceaad3d3</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>f77543ca83efd210ac3f6f80ceaad3d5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:19</sys_updated_on>
+        <value>incident</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=fb7543ca83efd210ac3f6f80ceaad3d3"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>fb7543ca83efd210ac3f6f80ceaad3d3</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>b37543ca83efd210ac3f6f80ceaad3d5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:19</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>fb7543ca83efd210ac3f6f80ceaad3d3</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>3f7543ca83efd210ac3f6f80ceaad3d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:19</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>fb7543ca83efd210ac3f6f80ceaad3d3</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>ff7543ca83efd210ac3f6f80ceaad3d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:19</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=fb7543ca83efd210ac3f6f80ceaad3d3"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=fb7543ca83efd210ac3f6f80ceaad3d3"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=c18daeca836fd210ac3f6f80ceaad361"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=c18daeca836fd210ac3f6f80ceaad361^sys_idNOT IN237543ca83efd210ac3f6f80ceaad398,b37543ca83efd210ac3f6f80ceaad3bb,b77543ca83efd210ac3f6f80ceaad3c4,bb7543ca83efd210ac3f6f80ceaad3cd,ef7543ca83efd210ac3f6f80ceaad3a4"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">a77543ca83efd210ac3f6f80ceaad397</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Incident Management Workflow">c18daeca836fd210ac3f6f80ceaad361</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:18</sys_created_on>
+        <sys_id>237543ca83efd210ac3f6f80ceaad398</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="ResponseNow">81ea9a06832fd210ac3f6f80ceaad391</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 20:12:17</sys_updated_on>
+        <ui_id>0a1e6f42-eff6-4ffe-bb9e-077974023843</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=237543ca83efd210ac3f6f80ceaad398"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>237543ca83efd210ac3f6f80ceaad398</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:18</sys_created_on>
+        <sys_id>a77543ca83efd210ac3f6f80ceaad39c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:18</sys_updated_on>
+        <value>If Category is Inquiry/Help</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=237543ca83efd210ac3f6f80ceaad398"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>237543ca83efd210ac3f6f80ceaad398</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:18</sys_created_on>
+        <sys_id>277543ca83efd210ac3f6f80ceaad39c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:18</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{Created_1.current.category}}=inquiry</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>237543ca83efd210ac3f6f80ceaad398</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:18</sys_created_on>
+        <sys_id>6f7543ca83efd210ac3f6f80ceaad39b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:18</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=237543ca83efd210ac3f6f80ceaad398"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=237543ca83efd210ac3f6f80ceaad398"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">7f7543ca83efd210ac3f6f80ceaad3ba</block>
+        <comment/>
+        <connected_to>0a1e6f42-eff6-4ffe-bb9e-077974023843</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Incident Management Workflow">c18daeca836fd210ac3f6f80ceaad361</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>b37543ca83efd210ac3f6f80ceaad3bb</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="ResponseNow">81ea9a06832fd210ac3f6f80ceaad391</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 20:12:17</sys_updated_on>
+        <ui_id>3d1a89ec-3c14-4144-ba72-3d738dd115b7</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=b37543ca83efd210ac3f6f80ceaad3bb"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>b37543ca83efd210ac3f6f80ceaad3bb</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>337543ca83efd210ac3f6f80ceaad3be</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:19</sys_updated_on>
+        <value>If 'Category' is 'Hardware'</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=b37543ca83efd210ac3f6f80ceaad3bb"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>b37543ca83efd210ac3f6f80ceaad3bb</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>bf7543ca83efd210ac3f6f80ceaad3bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:19</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_666e5545c3e232002841b63b12d3ae99</table>
+        <value>{{Created_1.current.category}}=hardware</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>b37543ca83efd210ac3f6f80ceaad3bb</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>fb7543ca83efd210ac3f6f80ceaad3bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:19</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_666e5545c3e232002841b63b12d3ae99</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=b37543ca83efd210ac3f6f80ceaad3bb"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=b37543ca83efd210ac3f6f80ceaad3bb"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">737543ca83efd210ac3f6f80ceaad3c4</block>
+        <comment/>
+        <connected_to>0a1e6f42-eff6-4ffe-bb9e-077974023843</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Incident Management Workflow">c18daeca836fd210ac3f6f80ceaad361</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>8</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>b77543ca83efd210ac3f6f80ceaad3c4</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="ResponseNow">81ea9a06832fd210ac3f6f80ceaad391</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 20:12:17</sys_updated_on>
+        <ui_id>d448dd2f-b2a0-44b2-bb26-79079a9efa64</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=b77543ca83efd210ac3f6f80ceaad3c4"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>b77543ca83efd210ac3f6f80ceaad3c4</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>377543ca83efd210ac3f6f80ceaad3c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:19</sys_updated_on>
+        <value>If 'Category' is 'Database'</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=b77543ca83efd210ac3f6f80ceaad3c4"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>b77543ca83efd210ac3f6f80ceaad3c4</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>b37543ca83efd210ac3f6f80ceaad3c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:19</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_666e5545c3e232002841b63b12d3ae99</table>
+        <value>{{Created_1.current.category}}=database</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>b77543ca83efd210ac3f6f80ceaad3c4</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>ff7543ca83efd210ac3f6f80ceaad3c6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:19</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_666e5545c3e232002841b63b12d3ae99</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=b77543ca83efd210ac3f6f80ceaad3c4"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=b77543ca83efd210ac3f6f80ceaad3c4"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">777543ca83efd210ac3f6f80ceaad3cd</block>
+        <comment/>
+        <connected_to>0a1e6f42-eff6-4ffe-bb9e-077974023843</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Incident Management Workflow">c18daeca836fd210ac3f6f80ceaad361</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>10</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>bb7543ca83efd210ac3f6f80ceaad3cd</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="ResponseNow">81ea9a06832fd210ac3f6f80ceaad391</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 20:12:17</sys_updated_on>
+        <ui_id>09b39e00-0f94-40d2-be3c-92b475f1147b</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=bb7543ca83efd210ac3f6f80ceaad3cd"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=bb7543ca83efd210ac3f6f80ceaad3cd"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=bb7543ca83efd210ac3f6f80ceaad3cd"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">ab7543ca83efd210ac3f6f80ceaad3a4</block>
+        <comment/>
+        <connected_to>0a1e6f42-eff6-4ffe-bb9e-077974023843</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Incident Management Workflow">c18daeca836fd210ac3f6f80ceaad361</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>ef7543ca83efd210ac3f6f80ceaad3a4</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="ResponseNow">81ea9a06832fd210ac3f6f80ceaad391</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 20:12:17</sys_updated_on>
+        <ui_id>a275f4c9-5fd4-4060-ad11-f308ed242f05</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=ef7543ca83efd210ac3f6f80ceaad3a4"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>ef7543ca83efd210ac3f6f80ceaad3a4</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>e37543ca83efd210ac3f6f80ceaad3a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:19</sys_updated_on>
+        <value>If 'Category' is 'Software'</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=ef7543ca83efd210ac3f6f80ceaad3a4"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>ef7543ca83efd210ac3f6f80ceaad3a4</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>637543ca83efd210ac3f6f80ceaad3a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:19</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_666e5545c3e232002841b63b12d3ae99</table>
+        <value>{{Created_1.current.category}}=software</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>ef7543ca83efd210ac3f6f80ceaad3a4</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 19:49:19</sys_created_on>
+        <sys_id>af7543ca83efd210ac3f6f80ceaad3a7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 19:49:19</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_666e5545c3e232002841b63b12d3ae99</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=ef7543ca83efd210ac3f6f80ceaad3a4"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=ef7543ca83efd210ac3f6f80ceaad3a4"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=c18daeca836fd210ac3f6f80ceaad361^sys_idNOT IN3c5a434283231610ac3f6f80ceaad380,745a434283231610ac3f6f80ceaad380,b5157a8683afd210ac3f6f80ceaad31c,fc5a434283231610ac3f6f80ceaad380"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>c18daeca836fd210ac3f6f80ceaad361</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 20:10:25</sys_created_on>
+        <sys_id>3c5a434283231610ac3f6f80ceaad380</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="ResponseNow">81ea9a06832fd210ac3f6f80ceaad391</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 20:10:25</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>87454baa-8801-433c-93a6-504ae66681c9</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>c18daeca836fd210ac3f6f80ceaad361</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.assigned_to.first_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 20:10:25</sys_created_on>
+        <sys_id>745a434283231610ac3f6f80ceaad380</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="ResponseNow">81ea9a06832fd210ac3f6f80ceaad391</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 20:10:25</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>eb9a6943-73c4-4898-bfb0-6f4c38b533b6</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>c18daeca836fd210ac3f6f80ceaad361</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.caller_id.first_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 18:37:39</sys_created_on>
+        <sys_id>b5157a8683afd210ac3f6f80ceaad31c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="ResponseNow">81ea9a06832fd210ac3f6f80ceaad391</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 18:37:39</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>93b9371a-8722-435d-b33c-031d099cc549</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>c18daeca836fd210ac3f6f80ceaad361</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.sla_due}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 20:10:25</sys_created_on>
+        <sys_id>fc5a434283231610ac3f6f80ceaad380</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="ResponseNow">81ea9a06832fd210ac3f6f80ceaad391</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 20:10:25</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>dc07d78d-2532-42fc-a520-d0ffef560e6d</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=c18daeca836fd210ac3f6f80ceaad361"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_c18daeca836fd210ac3f6f80ceaad361^sys_idNOT IN79153e4683afd210ac3f6f80ceaad326,b5153a8683afd210ac3f6f80ceaad3e4"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_c18daeca836fd210ac3f6f80ceaad361</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 18:37:38</sys_created_on>
+        <sys_id>79153e4683afd210ac3f6f80ceaad326</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="ResponseNow" source="x_1072120_ims_rn">81ea9a06832fd210ac3f6f80ceaad391</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ResponseNow">81ea9a06832fd210ac3f6f80ceaad391</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 18:37:38</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_c18daeca836fd210ac3f6f80ceaad361</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 18:37:38</sys_created_on>
+        <sys_id>b5153a8683afd210ac3f6f80ceaad3e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="ResponseNow" source="x_1072120_ims_rn">81ea9a06832fd210ac3f6f80ceaad391</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ResponseNow">81ea9a06832fd210ac3f6f80ceaad391</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 18:37:38</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_c18daeca836fd210ac3f6f80ceaad361"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_c18daeca836fd210ac3f6f80ceaad361"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_c18daeca836fd210ac3f6f80ceaad361"/>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=c18daeca836fd210ac3f6f80ceaad361"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=c18daeca836fd210ac3f6f80ceaad361"/>
+</record_update>
