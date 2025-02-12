@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_1072120_ims_rn.employee" name="x_1072120_ims_rn.employee">851b9246832fd210ac3f6f80ceaad362</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 16:43:59</sys_created_on>
+        <sys_id>491b9246832fd210ac3f6f80ceaad364</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>851b9246832fd210ac3f6f80ceaad362</sys_name>
+        <sys_package display_value="ResponseNow" source="x_1072120_ims_rn">81ea9a06832fd210ac3f6f80ceaad391</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ResponseNow">81ea9a06832fd210ac3f6f80ceaad391</sys_scope>
+        <sys_update_name>sys_embedded_help_role_491b9246832fd210ac3f6f80ceaad364</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 16:43:59</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>
