@@ -4,5 +4,4 @@ ResponseNow is a custom-built Incident Management System for ServiceNow, designe
 
 # 📌 Features
 - Automated Incident Logging – Capture and categorize incidents efficiently.
-- Notifications – Keep stakeholders informed with the updates.
 - Reports & Dashboards
